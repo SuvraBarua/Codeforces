@@ -1,3 +1,5 @@
+//Codeforces 1848A
+
 #include <iostream>
 
 using namespace std;
