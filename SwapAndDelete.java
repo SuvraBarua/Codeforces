@@ -1,6 +1,6 @@
 import java.util.Scanner;
 public final class SwapAndDelete{
-    void swap() {
+    static void swap() {
         Scanner input = new Scanner(System.in);
         String s = input.next();
         int length = s.length();
