@@ -15,15 +15,16 @@ void swap() {
     int ans = len;
     
     for(int i = 0; i<s.length(); i++){
-        if(x>0 && y>0){
-            if(s[i] == 0){
-                y--;
-                ans--;
-            } 
-            else{
-                x--;
-                ans--;
-            }
+        if(s[i] == '0' && y>0){
+           y--;
+           ans--;
+        }
+        else if(s[i] == '1' && x>0){
+            x--;
+            ans--;
+        }
+        else{
+            break;
         }
     }
     
