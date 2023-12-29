@@ -1,5 +1,5 @@
 import java.util.Scanner;
-class SwapAndDelete{
+public class SwapAndDelete{
     public static void swapAndDelete() {
         Scanner input = new Scanner(System.in);
         String s = input.next();
