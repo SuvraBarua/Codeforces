@@ -1,6 +1,6 @@
 import java.util.Scanner;
-public class SwapAndDelete{
-    public static void swapAndDelete() {
+public final class SwapAndDelete{
+    void swap() {
         Scanner input = new Scanner(System.in);
         String s = input.next();
         int length = s.length();
@@ -33,7 +33,7 @@ public class SwapAndDelete{
         int n = input.nextInt();
         
         for(int i = 0; i<n; i++){
-            swapAndDelete();
+            swap();
         }
     }
 }
