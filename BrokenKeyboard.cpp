@@ -15,18 +15,18 @@ int main() {
 
         for (int i = 0; i < n; ++i) {
             if (s[i] == 'b') {
-                s[i] = ' ';
+                s[i] = '';
                 if (!lower.empty()) {
-                    s[lower.back()] = ' ';
+                    s[lower.back()] = '';
                     lower.pop_back();
                 }
                 continue;
             }
 
             if (s[i] == 'B') {
-                s[i] = ' ';
+                s[i] = '';
                 if (!upper.empty()) {
-                    s[upper.back()] = ' ';
+                    s[upper.back()] = '';
                     upper.pop_back();
                 }
                 continue;
