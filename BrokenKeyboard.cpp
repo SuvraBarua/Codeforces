@@ -1,37 +1,46 @@
-#include <bits/stdc++.h>
-
-using namespace std;
-
-void Acode(){
-    string s;
-    cin >> s;
-    int bbc=0, sbc=0;
-    string ans = "";
-    for(int i = s.length()-1; i>=0; i--){
-        if(s[i] == 'b'){
-            sbc++;
-        }
-        else if(s[i] == 'B'){
-            bbc++;
-        }
-        else if((s[i] > 64 && s[i] < 91) && bbc>0){
-               bbc--;
-        }
-        else if((s[i] > 96 && s[i] < 123) && sbc>0){
-               sbc--;
-        }
-        else{
-            ans.insert(0,1,s[i]);
-        }
-    }
-    cout << ans << endl;
-}
+#include <iostream>
+#include <vector>
+#include <string>
 
 int main() {
-    int n;
-    cin >> n;
-    for(int i = 0; i<n; i++){
-        Acode();
+    int t;
+    std::cin >> t;
+
+    while (t--) {
+        std::string s;
+        std::cin >> s;
+
+        int n = s.length();
+        std::vector<int> upper, lower;
+
+        for (int i = 0; i < n; ++i) {
+            if (s[i] == 'b') {
+                s[i] = ' ';
+                if (!lower.empty()) {
+                    s[lower.back()] = ' ';
+                    lower.pop_back();
+                }
+                continue;
+            }
+
+            if (s[i] == 'B') {
+                s[i] = ' ';
+                if (!upper.empty()) {
+                    s[upper.back()] = ' ';
+                    upper.pop_back();
+                }
+                continue;
+            }
+
+            if ('a' <= s[i] && s[i] <= 'z') {
+                lower.push_back(i);
+            } else {
+                upper.push_back(i);
+            }
+        }
+
+        std::cout << s << std::endl;
     }
+
     return 0;
 }
