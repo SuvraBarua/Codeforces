@@ -5,25 +5,30 @@ using namespace std;
 void Acode(){
     string s;
     cin >> s;
-    
+    int bbc=0, sbc=0;
     for(int i = s.length()-1; i>=0; i--){
         if(s[i] == 'b'){
-            s.erase(i, 1);
-            for(int j =i-1; j>=0; j--){
-                if((s[j] > 96& s[j] < 123) && s[j]!= 'b'){
-                    s.erase(j, 1);
-                    break;
-                }
-            }
+            sbc++;
+            s.erase(i,1);
         }
         else if(s[i] == 'B'){
+            bbc++;
             s.erase(i, 1);
-            for(int j =i-1; j>=0; j--){
-                if((s[j] > 64 && s[j] < 91) && s[j]!='B'){
-                    s.erase(j, 1);
-                    break;
-                }
-            }
+        }
+        else if(bbc>0){
+           if(s[i] > 64 && s[i] <91){
+               bbc--;
+               s.erase(i, 1);
+           }
+        }
+        else if(sbc>0){
+           if(s[i] > 96 && s[i] <123){
+               sbc--;
+               s.erase(i, 1);
+           }
+        }
+        else{
+            continue;
         }
     }
     cout << s << endl;
