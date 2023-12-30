@@ -15,17 +15,13 @@ void Acode(){
             bbc++;
             s.erase(i, 1);
         }
-        else if(bbc>0){
-           if(s[i] > 64 && s[i] <91){
+        else if((s[i] > 64 && s[i] < 91) && bbc>0){
                bbc--;
                s.erase(i, 1);
-           }
         }
-        else if(sbc>0){
-           if(s[i] > 96 && s[i] <123){
+        else if((s[i] > 96 && s[i] < 123) && sbc>0){
                sbc--;
                s.erase(i, 1);
-           }
         }
         else{
             continue;
