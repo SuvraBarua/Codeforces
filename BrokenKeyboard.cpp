@@ -24,7 +24,7 @@ void Acode(){
             ans = ans + s[i];
         }
     }
-    cout << s << endl;
+    cout << ans << endl;
 }
 
 int main() {
