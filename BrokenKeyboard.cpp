@@ -21,7 +21,7 @@ void Acode(){
                sbc--;
         }
         else{
-            ans = ans + s[i];
+            ans.insert(0,1,s[i]);
         }
     }
     cout << ans << endl;
