@@ -9,19 +9,19 @@ void Acode(){
     for(int i = s.length()-1; i>=0; i--){
         if(s[i] == 'b'){
             sbc++;
-            s.erase(i,1);
+            s[i] = '';
         }
         else if(s[i] == 'B'){
             bbc++;
-            s.erase(i, 1);
+            s[i] = '';
         }
         else if((s[i] > 64 && s[i] < 91) && bbc>0){
                bbc--;
-               s.erase(i, 1);
+               s[i] = '';
         }
         else if((s[i] > 96 && s[i] < 123) && sbc>0){
                sbc--;
-               s.erase(i, 1);
+               s[i] = '';
         }
         else{
             continue;
