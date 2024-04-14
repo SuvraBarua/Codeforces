@@ -4,30 +4,30 @@ using namespace std;
  
 void Acode(){
     string s;
+ 			vector<char> c;
     cin >> s;
     int bbc=0, sbc=0;
     for(int i = s.length()-1; i>=0; i--){
         if(s[i] == 'b'){
             sbc++;
-            s[i] = '';
         }
         else if(s[i] == 'B'){
             bbc++;
-            s[i] = '';
         }
         else if((s[i] > 64 && s[i] < 91) && bbc>0){
                bbc--;
-               s[i] = '';
         }
         else if((s[i] > 96 && s[i] < 123) && sbc>0){
                sbc--;
-               s[i] = '';
         }
         else{
-            continue;
+         			c.push_back(s[i]);
         }
     }
-    cout << s << endl;
+    for(int i = c.size()-1; i>= 0; i--){
+     			cout << c[i];
+    }
+    cout << "\n";
 }
  
 int main() {
