@@ -23,7 +23,7 @@ void sb(){
             gCounter = 1;
         }
         if(cCounter == 0 && s[i] == c){
-            cCounter == 1;
+            cCounter = 1;
             tmp++;
         }
         else if(cCounter == 1 && s[i] != 'g'){
