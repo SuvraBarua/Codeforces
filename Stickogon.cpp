@@ -2,14 +2,6 @@
 
 using namespace std;
 
-bool isEqual(int a[], int b[], int s){
-    for(int i = 0; i<s; i++){
-        if(a[i] != b[i])
-            return false;
-    }
-    return true;
-}
-
 void sb(){
     int n;
     cin >> n;
@@ -33,7 +25,7 @@ void sb(){
             }
         }
         if(tc>2){
-            ans++;
+            ans += tc/3;
         }
         tc=0;
     }
