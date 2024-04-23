@@ -9,7 +9,7 @@ void sb(){
     int a[n];
     int counter[n] = {0};
     
-    int ans = 0, tc = 0;
+    int ans = 0, tc = 1;
     
     for(int i = 0; i<n; i++){
         cin >> a[i];
