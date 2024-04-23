@@ -27,7 +27,7 @@ void sb(){
         if(tc>2){
             ans += tc/3;
         }
-        tc=0;
+        tc=1;
     }
     cout << ans << "\n";
 }
