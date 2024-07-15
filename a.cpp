@@ -26,4 +26,5 @@ int main(){
         split();
         t--;
     }
+    return 0;
 }
