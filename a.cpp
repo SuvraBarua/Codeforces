@@ -8,6 +8,7 @@ void split(){
     
     if(n==1){
         cout << 0 << endl;
+        return;
     }
     
     while(n>k){
