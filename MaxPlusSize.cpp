@@ -17,6 +17,14 @@ void maxPlusSize(){
             maxIndex = i;
         }
     }
+    for(int i = 0; i<n; i++){
+        if(arr[i] == max){
+            if(!(i&1)){
+                maxIndex==i;
+                break;
+            }
+        }
+    }
     if(n&1){
         if(maxIndex&1){
             cout << (n/2)+max;
